@@ -15,7 +15,7 @@ jobs:
 
       - name: Download macOS Installer
         run: |
-          curl -L -o /tmp/InstallAssistant.pkg https://swcdn.apple.com/content/downloads/43/10/093-26142-A_NTCTG95AMR/1yn07o4d4iebndy533oracgub1q5y17mnu/InstallAssistant.pkg
+          curl -L -o /tmp/InstallAssistant.pkg https://swcdn.apple.com/content/downloads/16/30/093-05406-A_H4H8PWTFJR/38li0dkesp2ljw48jdrgg97mnhbc45pv2v/InstallAssistant.pkg
 
       - name: Install the assistant
         run: |
