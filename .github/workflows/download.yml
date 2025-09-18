@@ -15,7 +15,7 @@ jobs:
 
       - name: Download macOS Installer
         run: |
-          curl -L -o /tmp/InstallAssistant.pkg https://swcdn.apple.com/content/downloads/43/10/093-26142-A_NTCTG95AMR/1yn07o4d4iebndy533oracgub1q5y17mnu/InstallAssistant.pkg
+          curl -L -o /tmp/InstallAssistant.pkg https://swcdn.apple.com/content/downloads/26/38/093-37779-A_Y4733G5GHI/adlxnkoqzyrrzfl1r5krg7ql0cod8vpl5e/InstallAssistant.pkg
 
       - name: Install the assistant
         run: |
@@ -26,8 +26,8 @@ jobs:
           sudo hdiutil create -o /tmp/Tahoe -size 20000m -volname 'Tahoe' -layout SPUD -fs HFS+J
           sudo hdiutil attach /tmp/Tahoe.dmg -noverify -mountpoint /Volumes/Tahoe
           sleep 10
-          sudo /Applications/'Install macOS Tahoe Beta'.app/Contents/Resources/createinstallmedia --volume /Volumes/Tahoe --nointeraction
-          cp -R '/Volumes/Install macOS Tahoe Beta/BaseSystem' /tmp/BaseSystem
+          sudo /Applications/'Install macOS Tahoe'.app/Contents/Resources/createinstallmedia --volume /Volumes/Tahoe --nointeraction
+          cp -R '/Volumes/Install macOS Tahoe/BaseSystem' /tmp/BaseSystem
 
       - name: Upload com.apple.recovery.boot
         uses: actions/upload-artifact@v4
